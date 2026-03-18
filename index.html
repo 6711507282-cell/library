@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบห้องสมุดมหาวิทยาลัย</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="login-section" class="container">
+        <h2>เข้าสู่ระบบห้องสมุด</h2>
+        <p style="text-align: center; color: #666; font-size: 14px;">กรุณากรอกข้อมูลเพื่อเข้าใช้งาน</p>
+        <form id="login-form">
+            <input type="text" id="fname" placeholder="ชื่อ" required>
+            <input type="text" id="lname" placeholder="นามสกุล" required>
+            <input type="number" id="year" placeholder="ชั้นปี (เช่น 1, 2, 3, 4)" required>
+            <input type="text" id="major" placeholder="สาขาวิชา" required>
+            <input type="text" id="faculty" placeholder="คณะ" required>
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+    </div>
+
+    <div id="library-section" class="container hidden">
+        <h2>ค้นหาหนังสือห้องสมุด</h2>
+        <div class="user-info" id="user-display"></div>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="พิมพ์ชื่อหนังสือ หรือ หมวดหมู่ (เช่น ภาษาไทย)">
+            <button id="search-btn">ค้นหา</button>
+        </div>
+        
+        <div id="search-results" class="results-container">
+            <p style="text-align: center; color: #999;">ผลการค้นหาจะแสดงที่นี่</p>
+        </div>
+
+        <button id="add-mock-books" class="test-btn">เพิ่มข้อมูลหนังสือจำลอง (สำหรับทดสอบครั้งแรก)</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
